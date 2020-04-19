@@ -17,11 +17,19 @@ a {
     margin: 20px;
 }
 
+.container {
+
+}
+
 /*
  * ボタンの共通設定
  */
 .common-button {
 
+}
+
+.memo {
+  margin-left: 15px;
 }
 
 /*
