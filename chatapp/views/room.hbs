@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <h1 class="col-lg-12">Node Chat チャットルーム</h1>
+    </div>
+    <div class="row">
+        <form method="post" action="/">
+            <div class="room-login_user">
+
+                ログインユーザ：{{userName}}さん
+                <input id="userName" type="hidden" value="{{userName}}">
+
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="4" class="form_with form-control-lg" placeholder="投稿文を入力してください"></textarea>
+            </div>
+            <div class="room-submit">
+                <input type="button" value="投稿" class="btn-lg btn-info" onclick="publish();">
+                <input type="button" value="メモ" class="btn-lg btn-success memo" onclick="memo();">
+            </div>
+            <div class="room-thread">
+              <input type="button" value="新着順" class="btn-lg btn-info" onclick="newer();">
+              <input type="button" value="投稿順" class="btn-lg btn-success memo" onclick="older();">
+                <div id="thread">
+                </div>
+            </div>
+            <div class="room-exit">
+                <input type="button" value="退室する" class="btn-lg btn-warning" onclick="exit();">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+
+<script src="/javascripts/socket.js"></script>
+<script src="/javascripts/enter.js"></script>
+<script src="/javascripts/publish.js"></script>
+<script src="/javascripts/memo.js"></script>
+<script src="/javascripts/exit.js"></script>
