@@ -21,6 +21,7 @@ function memo() {
         $('#thread').prepend('<p>' + userName + `さんのメモ: ` + sendmessage +'</p>'); //メッセージ表示
          //投稿欄の文字削除
         $('#message').val('');
+        this.searchform.searchbox.value="";
         return false;
     }
 }
