@@ -10,7 +10,5 @@ const userName = $('#userName').val();　
 
 // サーバから受信した入室メッセージを画面上に表示する
 socket.on('receiveEnterEvent', function (data) {
-
-  $('#thread').append('<p>' + data + '</p>');
-
+    $('#thread').prepend('<p>' + data + '</p>');
 });
