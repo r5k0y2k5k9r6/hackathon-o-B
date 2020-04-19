@@ -15,15 +15,5 @@ module.exports = function (server) {
         // 退室モジュールの呼出
         require('./exit')(socket);
 
-        socket.on('sendMessageEvent', function (data) {
-          if (!data) {
-            return;
-          }
-
-          console.log('クライアントの入力値:' + data );
-
-          io.sockets.emit('receiveMessageEvent', data);
-        });
-
     });
 };
